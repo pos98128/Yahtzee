@@ -1,0 +1,7 @@
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\pos98\OneDrive\바탕 화면\UCONN\OPIM 3223_Advanced Business Application Development\Yahtzee\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
