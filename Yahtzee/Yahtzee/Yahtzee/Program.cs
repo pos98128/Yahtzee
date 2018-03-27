@@ -399,7 +399,7 @@ namespace Yahtzee
             System.Console.WriteLine("2. Twos"); 
             System.Console.WriteLine("3. Threes");
             System.Console.WriteLine("4. Fours");
-            System.Console.WriteLine("5. Five");
+            System.Console.WriteLine("5. Fives");
             System.Console.WriteLine("6. Sixes");
             System.Console.WriteLine("7. Three Of A Kind");
             System.Console.WriteLine("8. Four Of A Kind");
@@ -426,7 +426,7 @@ namespace Yahtzee
                     System.Console.WriteLine("The score is equal to sum of dice with the number 2");
                     int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                     sum = nums.Count(n => n == 2) * 2;
-                    Console.WriteLine("score for the ACES is " + sum);
+                    Console.WriteLine("score for the TWOS is " + sum);
                     System.Console.ReadLine();
                 }
                 if (score == 3)
@@ -434,7 +434,7 @@ namespace Yahtzee
                     System.Console.WriteLine("The score is equal to sum of dice with the number 3");
                     int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                     sum = nums.Count(n => n == 3) *3;
-                    Console.WriteLine("score for the ACES is " + sum);
+                    Console.WriteLine("score for the THREES is " + sum);
                     System.Console.ReadLine();
                 }
                 if (score == 4)
@@ -442,7 +442,7 @@ namespace Yahtzee
                     System.Console.WriteLine("The score is equal to sum of dice with the number 4");
                     int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                     sum = nums.Count(n => n == 4) * 4;
-                    Console.WriteLine("score for the ACES is " + sum);
+                    Console.WriteLine("score for the FOURS is " + sum);
                     System.Console.ReadLine();
                 }
                 if (score == 5)
@@ -450,7 +450,7 @@ namespace Yahtzee
                     System.Console.WriteLine("The score is equal to sum of dice with the number 5");
                     int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                     sum = nums.Count(n => n == 5) * 5;
-                    Console.WriteLine("score for the ACES is " + sum);
+                    Console.WriteLine("score for the FIVES is " + sum);
                     System.Console.ReadLine();
                 }
                 if (score == 6)
@@ -458,23 +458,45 @@ namespace Yahtzee
                     System.Console.WriteLine("The score is equal to sum of dice with the number 6");
                     int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                     sum = nums.Count(n => n == 6) * 6;
-                    Console.WriteLine("score for the ACES is " + sum);
+                    Console.WriteLine("score for the SIXES is " + sum);
                     System.Console.ReadLine();
                 }
                 if (score == 7)
                 {
                     System.Console.WriteLine("The score is equal to sum of all dice");
-
-
-
+                    int[] collect = { dice1, dice2, dice3, dice4, dice5 };
+                    int total = 0;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        int x = collect[i];
+                        int y = collect.Count(n => n == x);
+                        if (y > 2)
+                        {
+                            total = dice1 + dice2 + dice3 + dice4 + dice5;
+                        }
+                    }
+                    Console.WriteLine("score for the Three Of A Kind is " + total);
                 }
                 if (score == 8)
                 {
                     System.Console.WriteLine("The score is equal to sum of all dice");
+                    int[] collect = { dice1, dice2, dice3, dice4, dice5 };
+                    int total = 0;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        int x = collect[i];
+                        int y = collect.Count(n => n == x);
+                        if (y > 3)
+                        {
+                            total = dice1 + dice2 + dice3 + dice4 + dice5;
+                        }
+                    }
+                    Console.WriteLine("score for the Four Of A Kind is " + total);
                 }
                 if (score == 9)
                 {
                     System.Console.WriteLine("The score is 25");
+
                 }
                 if (score == 10)
                 {
@@ -491,19 +513,11 @@ namespace Yahtzee
                 }
                 if (score == 13)
                 {
-                    
                     System.Console.WriteLine("The score is equal to sum of all dice");
+                    int total = dice1 + dice2 + dice3 + dice4 + dice5;
+                    Console.WriteLine("score for the Chance is " + total);
                 }
-            }
-
-
-
-
-            System.Console.WriteLine("dice 1 = " + dice1);
-            System.Console.WriteLine("dice 2 = " + dice2);
-            System.Console.WriteLine("dice 3 = " + dice3);
-            System.Console.WriteLine("dice 4 = " + dice4);
-            System.Console.WriteLine("dice 5 = " + dice5);            
+            }         
             System.Console.ReadLine();
 
         }
