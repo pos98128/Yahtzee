@@ -13,19 +13,18 @@ namespace Yahtzee
             int round;
             int finalscore = 0;
             System.Console.WriteLine("Let's play Yahtzee!\n");
+            int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0, m = 0;
 
-            for (round = 1; round <= 13; round++)
+            for (round = 1; round <= 2; round++)
             {
                 System.Console.WriteLine("Round, " + round);
                 int dice1, dice2, dice3, dice4, dice5;
                 int choosedice;
-                int whatdice;
-                
+                int whatdice;                
                 string yorn;
                 int score;
                 Random rnd = new Random();
-
-                
+                                
                 System.Console.WriteLine("Press Enter to roll the dice");
                 System.Console.ReadLine();
 
@@ -35,7 +34,6 @@ namespace Yahtzee
                 dice3 = rnd.Next(1, 7);
                 dice4 = rnd.Next(1, 7);
                 dice5 = rnd.Next(1, 7);
-                
                 System.Console.WriteLine("dice 1 = " + dice1);
                 System.Console.WriteLine("dice 2 = " + dice2);
                 System.Console.WriteLine("dice 3 = " + dice3);
@@ -55,7 +53,6 @@ namespace Yahtzee
                     System.Console.WriteLine("Second roll");
                     System.Console.WriteLine("How many dice do you want to roll again?");
                     choosedice = int.Parse(Console.ReadLine());
-
                     if (choosedice == 0)
                     {
                         System.Console.WriteLine("You chose not to roll any dice");
@@ -386,21 +383,20 @@ namespace Yahtzee
                         System.Console.ReadLine();
                     }
                 }
-
-                System.Console.WriteLine("What category would you like to choose for the score?");
-                System.Console.WriteLine("1. Aces, ");
-                System.Console.WriteLine("2. Twos");
-                System.Console.WriteLine("3. Threes");
-                System.Console.WriteLine("4. Fours");
-                System.Console.WriteLine("5. Fives");
-                System.Console.WriteLine("6. Sixes");
-                System.Console.WriteLine("7. Three Of A Kind");
-                System.Console.WriteLine("8. Four Of A Kind");
-                System.Console.WriteLine("9. Full House");
-                System.Console.WriteLine("10. Small Straight");
-                System.Console.WriteLine("11. Large Straight");
-                System.Console.WriteLine("12. Yahtzee");
-                System.Console.WriteLine("13. Chance");
+                System.Console.WriteLine("What category would you like to choose for the score?\n *choose only the score with 0*");
+                System.Console.WriteLine("1. Aces, score: "+ a);
+                System.Console.WriteLine("2. Twos, score: " + b);
+                System.Console.WriteLine("3. Threes, score: " + c);
+                System.Console.WriteLine("4. Fours, score: " + d);
+                System.Console.WriteLine("5. Fives, score: " + e);
+                System.Console.WriteLine("6. Sixes, score: " + f);
+                System.Console.WriteLine("7. Three Of A Kind, score: " + g);
+                System.Console.WriteLine("8. Four Of A Kind, score: " + h);
+                System.Console.WriteLine("9. Full House, score: " + i);
+                System.Console.WriteLine("10. Small Straight, score: " + j);
+                System.Console.WriteLine("11. Large Straight, score: " + k);
+                System.Console.WriteLine("12. Yahtzee, score: " + l);
+                System.Console.WriteLine("13. Chance, score: " + m);
 
                 score = int.Parse(Console.ReadLine());
                 if (1 <= score && score <= 13)
@@ -411,8 +407,8 @@ namespace Yahtzee
                         System.Console.WriteLine("The score is equal to sum of dice with the number 1");
                         int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                         total = nums.Count(n => n == 1);
-                        Console.WriteLine("score for the ACES is " + total);
-                        System.Console.ReadLine();
+                        Console.WriteLine("score for the ACES is " + total);                        
+                        a = total;
                     }
                     if (score == 2)
                     {
@@ -420,7 +416,7 @@ namespace Yahtzee
                         int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                         total = nums.Count(n => n == 2) * 2;
                         Console.WriteLine("score for the TWOS is " + total);
-                        System.Console.ReadLine();
+                        b = total;
                     }
                     if (score == 3)
                     {
@@ -428,7 +424,7 @@ namespace Yahtzee
                         int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                         total = nums.Count(n => n == 3) * 3;
                         Console.WriteLine("score for the THREES is " + total);
-                        System.Console.ReadLine();
+                        c = total;
                     }
                     if (score == 4)
                     {
@@ -436,7 +432,7 @@ namespace Yahtzee
                         int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                         total = nums.Count(n => n == 4) * 4;
                         Console.WriteLine("score for the FOURS is " + total);
-                        System.Console.ReadLine();
+                        d = total;
                     }
                     if (score == 5)
                     {
@@ -444,7 +440,7 @@ namespace Yahtzee
                         int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                         total = nums.Count(n => n == 5) * 5;
                         Console.WriteLine("score for the FIVES is " + total);
-                        System.Console.ReadLine();
+                        e = total;
                     }
                     if (score == 6)
                     {
@@ -452,7 +448,7 @@ namespace Yahtzee
                         int[] nums = { dice1, dice2, dice3, dice4, dice5 };
                         total = nums.Count(n => n == 6) * 6;
                         Console.WriteLine("score for the SIXES is " + total);
-                        System.Console.ReadLine();
+                        f = total;
                     }
                     if (score == 7)
                     {
@@ -468,6 +464,7 @@ namespace Yahtzee
                             }
                         }
                         Console.WriteLine("score for the Three Of A Kind is " + total);
+                        g = total;
                     }
                     if (score == 8)
                     {
@@ -483,6 +480,7 @@ namespace Yahtzee
                             }
                         }
                         Console.WriteLine("score for the Four Of A Kind is " + total);
+                        h = total;
                     }
                     if (score == 9)
                     {
@@ -522,6 +520,7 @@ namespace Yahtzee
                             total = 0;
 
                         Console.WriteLine("score for the Full House is " + total);
+                        i = total;
                     }
                     if (score == 10)
                     {
@@ -551,7 +550,7 @@ namespace Yahtzee
                         else
                         { total = 0; }
                         Console.WriteLine("score for the Small Straight is " + total);
-                        Console.ReadLine();
+                        j = total;
                     }
                     if (score == 11)
                     {
@@ -576,7 +575,7 @@ namespace Yahtzee
                         else
                         { total = 0; }
                         Console.WriteLine("score for the Large Straight is " + total);
-                        Console.ReadLine();
+                        k = total;
                     }
                     if (score == 12)
                     {
@@ -585,19 +584,34 @@ namespace Yahtzee
                             total = 50;
                         }
                         Console.WriteLine("score for the Chance is " + total);
+                        l = total;
                     }
                     if (score == 13)
                     {
                         System.Console.WriteLine("The score is equal to sum of all dice");
                         total = dice1 + dice2 + dice3 + dice4 + dice5;
                         Console.WriteLine("score for the Chance is " + total);
+                        m = total;
                     }
                     finalscore += total;
                 }
                 System.Console.ReadLine();
-                
             }
-            System.Console.WriteLine("Your Final Score is " + finalscore);
+            System.Console.WriteLine("What category would you like to choose for the score?\n *choose only the score with 0*");
+            System.Console.WriteLine("1. Aces, score: " + a);
+            System.Console.WriteLine("2. Twos, score: " + b);
+            System.Console.WriteLine("3. Threes, score: " + c);
+            System.Console.WriteLine("4. Fours, score: " + d);
+            System.Console.WriteLine("5. Fives, score: " + e);
+            System.Console.WriteLine("6. Sixes, score: " + f);
+            System.Console.WriteLine("7. Three Of A Kind, score: " + g);
+            System.Console.WriteLine("8. Four Of A Kind, score: " + h);
+            System.Console.WriteLine("9. Full House, score: " + i);
+            System.Console.WriteLine("10. Small Straight, score: " + j);
+            System.Console.WriteLine("11. Large Straight, score: " + k);
+            System.Console.WriteLine("12. Yahtzee, score: " + l);
+            System.Console.WriteLine("13. Chance, score: " + m);
+            System.Console.WriteLine("\nYour Final Score is " + finalscore);
             System.Console.ReadLine();
         }
     }
