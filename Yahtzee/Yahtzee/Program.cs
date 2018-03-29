@@ -15,7 +15,7 @@ namespace Yahtzee
             System.Console.WriteLine("Let's play Yahtzee!\n");
             int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0, m = 0;
 
-            for (round = 1; round <= 2; round++)
+            for (round = 1; round <= 13; round++)
             {
                 System.Console.WriteLine("Round, " + round);
                 int dice1, dice2, dice3, dice4, dice5;
